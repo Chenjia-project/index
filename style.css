@@ -28,7 +28,7 @@ html, body {
 }
 
 .bg .origin {
-    background-image: url('./image/day.png?v=1683443010000');
+    background-image: url('./image/day.webp?v=1683443010000');
     opacity: 0;
     filter: blur(3px); 
 }
@@ -157,7 +157,7 @@ html, body {
 
 @media (prefers-color-scheme: dark) {
     .bg .origin {
-        background-image: url('./image/night.png?v=1683443010000');
+        background-image: url('./image/night.webp?v=1683443010000');
         filter: blur(3px); 
     }
     .footer {
