@@ -29,10 +29,7 @@ html, body {
 
 .bg .origin {
     background-image: url('./image/day.webp?v=1683443010000');
-    opacity: 0;
     filter: blur(3px); 
-}
-.loadend .bg .origin {
     opacity: 1;
     -webkit-transition: background-image 0.5s ease-out, opacity 0.5s ease-out;
     -moz-transition: background-image 0.5s ease-out, opacity 0.5s ease-out;
@@ -48,8 +45,6 @@ html, body {
     transform: translateY(-50%);
     text-align: center;
     opacity: 1;
-}
-.loadend .text-banner {
     -webkit-transition: opacity 0.5s linear;
     -moz-transition: opacity 0.5s linear;
     -ms-transition: opacity 0.5s linear;
@@ -64,8 +59,6 @@ html, body {
     display: none;
     margin-top: 16px;
     font-size: 22px;
-}
-.loadend .text-banner .subtitle {
     display: block;
 }
 
@@ -76,65 +69,6 @@ html, body {
     color: #FFF;
 }
 
-.sp {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    max-width: 100%;
-    max-height: 100%;
-    transform: translate(-50%, -50%);
-    background: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(10px);
-    color: #FFF;
-    font-size: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 0px 8px 0px #000;
-    overflow: auto;
-    opacity: 0;
-    pointer-events: none;
-    touch-action: none;
-}
-.loadend .sp {
-    -webkit-transition: opacity 0.5s linear;
-    -moz-transition: opacity 0.5s linear;
-    -ms-transition: opacity 0.5s linear;
-    transition: opacity 0.5s linear;
-}
-.sp.show {
-    opacity: 1;
-    pointer-events: auto;
-    touch-action: auto;
-}
-
-.sp a {
-    color: #FFF;
-}
-
-.sp .container {
-    padding: 16px;
-    box-sizing: border-box;
-}
-
-.sp .container h2 {
-    margin-top: 6px;
-}
-
-.sp .container p {
-    margin: 8px 0;
-}
-
-.sp .container code {
-    font-family: consolas, monospace, ui-monospace;
-}
-
-.sp a.close {
-    position: absolute;
-    top: 0;
-    right: 6px;
-    font-size: 16px;
-    text-decoration: none;
-}
-
 .footer {
     position: absolute;
     left: 0;
@@ -143,8 +77,6 @@ html, body {
     color: #FFF;
     text-align: center;
     opacity: 1;
-}
-.loadend .footer {
     -webkit-transition: opacity 0.5s linear;
     -moz-transition: opacity 0.5s linear;
     -ms-transition: opacity 0.5s linear;
@@ -175,11 +107,6 @@ html, body {
     .text-banner .subtitle {
         margin-top: 8px;
         font-size: 14px;
-    }
-
-    .sp {
-        width: calc(100% - 40px);
-        font-size: 16px;
     }
 
     .footer {
