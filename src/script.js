@@ -8,4 +8,5 @@ window.addEventListener('hashchange', () =>
 {
         doms.textBanner.classList.remove('hide');
         doms.footer.classList.remove('hide');
-});
+})
+
