@@ -18,7 +18,7 @@
                 <img src="./image/logo-alpha.webp" alt="Logo">
             </div>
 	    <div class="title"><img src="./image/textlogo.webp" width="245px" height="70px" alt="Text Logo"></div>
-	    <div class="countdown">开服倒计时: <p id="countdown">Loading...</p></div>
+	    <div class="countdown"><p id="countdown">Loading...</p></div>
             <div class="subtitle">
                 <a href="https://jq.qq.com/?_wv=1027&k=vXkTtV8K">加入群聊</a>
                 <a href="https://map.chenjia.one:25556">世界地图</a>
@@ -35,29 +35,37 @@
 
         <script src="./script.js?v=1683443010000"></script>
 <script>
-    function countDown(time) {
-        var nowTime = +new Date();
-        var inputTime = +new Date(time);
-        var times = (inputTime - nowTime) / 1000;
-        var d = parseInt(times / 60 / 60 / 24);
-        d = d < 10 ? '0' + d : d;
-        var h = parseInt(times / 60 / 60 % 24);
-        h = h < 10 ? '0' + h : h;
-        var m = parseInt(times / 60 % 60);
-        m = m < 10 ? '0' + m : m;
-        var s = parseInt(times % 60);
-        s = s < 10 ? '0' + s : s;
-        return d + '天' + h + '时' + m + '分' + s + '秒';
-    }
-    // 设置终止时间
-    time = '2023-07-01 18:00:00';
+// 获取倒计时元素
+var countdownElement = document.getElementById('countdown');
 
-    //  设置定时器1秒运行1次
-    window.setInterval(function(){
-        timeText = countDown(time);
-        let pTime = document.getElementById('countdown');
-        pTime.innerHTML = timeText;
-    }, 1000);
+// 设置终止时间
+var endTime = new Date('2023-07-01 12:00:00');
+
+// 定义更新倒计时的函数
+function updateCountdown() {
+    var now = new Date();
+    var timeDiff = endTime - now;
+    
+    if (timeDiff <= 0) {
+        // 倒计时结束，替换内容
+        var contentAfterEnding = '一个简简单单的休闲服务器！服务器地址为：<p>Chenjia.One</p>';
+        countdownElement.innerHTML = contentAfterEnding;
+        
+        // 停止定时器
+        clearInterval(timer);
+    } else {
+        // 更新倒计时
+        var days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+        
+        countdownElement.innerHTML = days + '天 ' + hours + '时 ' + minutes + '分 ' + seconds + '秒';
+    }
+}
+
+// 每秒更新倒计时
+var timer = setInterval(updateCountdown, 1000);
 </script>
     </body>
 </html>
