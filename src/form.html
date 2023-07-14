@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>海蓝大陆 | 表单</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ <link crossorigin="anonymous" integrity="sha512-T584yQ/tdRR5QwOpfvDfVQUidzfgc2339Lc8uBDtcp/wYu80d7jwBgAxbyMh0a9YM9F8N3tdErpFI8iaGx6x5g==" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container-fluid">
+    <h1>联系表单</h1>
+<p>该表单将提交信息给海蓝大陆管理员，您填写的信息都将得到妥善处理。</p>
+    <p>该表单将会验证电子邮件地址，请勿胡乱填写</p>
+    <form target="_blank" action="https://formsubmit.co/formsubmit@chenjia.one" method="POST">
+      <div class="form-group">
+        <div class="form-row">
+          <div class="col">
+            <input type="text" name="name" class="form-control" placeholder="用户名" required>
+            <input type="hidden" name="_subject" value="新的投诉！">
+            <input type="hidden" name="_captcha" value="true">
+            <input type="hidden" name="_template" value="table">
+          </div>
+          <div class="col">
+            <input type="email" name="email" class="form-control" placeholder="电子邮件地址" required>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <textarea placeholder="您需要提交的信息" class="form-control" name="message" rows="10" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-lg btn-dark btn-block">确认</button>
+    </form>
+  </div>
+</body>
+</html>
